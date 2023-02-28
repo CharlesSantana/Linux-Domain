@@ -1,0 +1,37 @@
+#!/bin/bash
+clear
+echo IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+echo 
+echo INSTALACAO DAS DEPENDENCIAS PARA INSTALAO DO CID  
+echo
+echo EM UM DADO MOMENTO APARECERA UMA TELAS DIGITE liliani.br  
+echo  
+echo IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+echo
+#cd Downloads
+# Instalar dependencias importantes para o CID.
+sudo apt-get install samba krb5-user krb5-config winbind libpam-winbind libnss-winbind libpam-mount-bin -y
+
+echo IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+echo 
+echo NESTE MOMENTO IREMOS INSTALAR O DOMINIO LILIANI, AGUARDE O TERMINO  
+echo
+echo AO FINAL DIGITE OS DADOS PARA PROMOVER A MAQUINA NO DOMINIO
+echo
+echo REINICIE O COMPUTADOR...
+echo
+echo ...E DIGITE O USUARIO E SENHA DO USUARIO NA TELA DE LOGIN
+echo  
+echo IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+
+sudo wget http://live.liliani.br/linux/linux/dominio/cid-1.2.1.tar.gz
+tar zxvf cid-1.2.1.tar.gz
+cd cid-1.2.1
+sleep 5
+sudo ./INSTALL.sh
+sudo cid-gtk
+
+
+
+
+
